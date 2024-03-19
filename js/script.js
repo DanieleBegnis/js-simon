@@ -7,6 +7,8 @@ console.log(randArray);
 //scrivo l'array con i numeri inseriti randomicamente nel DOM
 document.querySelector('#text').innerHTML = randArray
 
+
+
 function generateRandomArray(arrayLength, numMin, numMax) {
     // Creo un array vuoto
     const randomNumbersArray = [];
@@ -32,8 +34,11 @@ function hideNumbers() {
 setTimeout(askNumbers, 9000);
 function askNumbers() {
     for(let i = 0; i < randArray.length; i++) {
-        prompt('scrivi il numero che hai visto')
-    }  
+        let userAnswer = prompt('scrivi il numero che hai visto');
+        console.log(userAnswer)
+    }
+    
+      
 }
 //funzione che crea numeri random
 function getRndInteger(min, max) {
