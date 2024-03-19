@@ -22,7 +22,11 @@ function generateRandomArray(arrayLength, numMin, numMax) {
     
     return randomNumbersArray;
 }
-
+//faccio scomparire i numeri dopo 30 secondi
+setTimeout(hideNumbers, 30000);
+function hideNumbers() {
+    document.getElementById('text').style.display = 'none'
+}
 
 //funzione che crea numeri random
 function getRndInteger(min, max) {
