@@ -25,21 +25,28 @@ function generateRandomArray(arrayLength, numMin, numMax) {
     return randomNumbersArray;
 }
 //faccio scomparire i numeri dopo 30 secondi
-setTimeout(hideNumbers, 8000);
+setTimeout(hideNumbers, 30000);
 function hideNumbers() {
     document.getElementById('text').style.display = 'none'  
 }
 
 //chiedo all'utente 5 volte i numeri che ha visto
-setTimeout(askNumbers, 9000);
+setTimeout(askNumbers, 31000);
 function askNumbers() {
     for(let i = 0; i < randArray.length; i++) {
+        const userAnswerarray = [];
         let userAnswer = prompt('scrivi il numero che hai visto');
-        console.log(userAnswer)
+        userAnswerarray.push(userAnswer);
+        console.log(userAnswerarray);
+        if(userAnswerarray == randArray [i]) {
+            alert('Numero corretto!')
+        } else {
+            alert('numero sbagliato :(')
+        }
     }
-    
-      
 }
+
+
 //funzione che crea numeri random
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
