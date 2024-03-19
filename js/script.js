@@ -23,11 +23,18 @@ function generateRandomArray(arrayLength, numMin, numMax) {
     return randomNumbersArray;
 }
 //faccio scomparire i numeri dopo 30 secondi
-setTimeout(hideNumbers, 30000);
+setTimeout(hideNumbers, 8000);
 function hideNumbers() {
-    document.getElementById('text').style.display = 'none'
+    document.getElementById('text').style.display = 'none'  
 }
 
+//chiedo all'utente 5 volte i numeri che ha visto
+setTimeout(askNumbers, 9000);
+function askNumbers() {
+    for(let i = 0; i < randArray.length; i++) {
+        prompt('scrivi il numero che hai visto')
+    }  
+}
 //funzione che crea numeri random
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
